@@ -1,0 +1,22 @@
+# Data Configuration
+data:
+  raw_csv: "GC_Melting_temperature_corrected.csv"
+  train_file: "train_data.csv"
+  val_file: "val_data.csv"
+  target_scale: 1000.0
+
+# Model Architecture
+model:
+  node_dim: 10           # UPDATED: 9 phys features + 1 virtual flag
+  hidden_dim: 128
+  output_dim: 128
+  des_embed_dim: 32
+  dropout: 0.3
+
+# Training Hyperparameters
+train:
+  batch_size: 32
+  epochs: 100
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  save_path: "thermo_gnn_model.pth"
